@@ -19,7 +19,7 @@ const styles = {
   }
 }
 
-const TodoBar = ({ deleteCompleted, filterComplete, filterUncomplete, handleFilterChange }) => {
+const TodoBar = ({ deleteCompleted, handleFilterChange }) => {
   return (
     <Toolbar style={styles.toolbar}>
       <ToolbarGroup style={styles.toolbarGroup}>
@@ -30,8 +30,8 @@ const TodoBar = ({ deleteCompleted, filterComplete, filterUncomplete, handleFilt
             style={styles.radioButton}
           />
           <RadioButton
-            value="uncomplete"
-            label="Show Uncomplete"
+            value="incomplete"
+            label="Show Incomplete"
             style={styles.radioButton}
           />
           <RadioButton
@@ -44,7 +44,7 @@ const TodoBar = ({ deleteCompleted, filterComplete, filterUncomplete, handleFilt
         <RaisedButton
           label="Remove Completed"
           primary={true}
-          onClick={(e) => deleteCompleted()}
+          onClick={() => deleteCompleted()}
           icon={<ActionDelete />}
         />
       </ToolbarGroup>
@@ -54,8 +54,6 @@ const TodoBar = ({ deleteCompleted, filterComplete, filterUncomplete, handleFilt
 
 TodoBar.propTypes = {
   deleteCompleted: PropTypes.func.isRequired,
-  filterComplete: PropTypes.func.isRequired,
-  filterUncomplete: PropTypes.func.isRequired,
   handleFilterChange: PropTypes.func.isRequired,
 }
 

@@ -40,9 +40,12 @@ class App extends Component {
     const { todos } = this.state;
     let { lastId } = this.state;
 
-    this.setState({ todos: [...todos, { id: lastId, ...todo, complete: false }] });
-    this.setState({ todoInput: { text: '' } });
-    this.setState({ lastId: ++lastId })
+    this.setState({
+      todos: [...todos, { id: lastId, ...todo, complete: false }],
+      todoInput: { text: '' },
+      lastId: ++lastId,
+    },
+    );
   }
 
   deleteCompleted() {
@@ -89,7 +92,7 @@ class App extends Component {
             handleFilterChange={this.handleFilterChange}
             filter={filter}
             todos={todos} />
-            
+
         </Paper>
       </MuiThemeProvider>
     )
