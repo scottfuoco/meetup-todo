@@ -1,6 +1,5 @@
-# Source Code For DJ and Scott's React Meet Up
+# DJ and Scott's React Meetup
 
-## Installation Instuctions
-- npm install
-- npm start 
-
+## Installation Instructions
+- yarn
+- yarn start
